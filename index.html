@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MG Agro Assistência Técnica | Roçadeiras e Motosserras em Aimorés</title>
+
+  <meta
+    name="description"
+    content="Assistência técnica em Aimorés para roçadeiras, motosserras, geradores, motobombas, lavadoras e ferramentas elétricas. MG Agro em frente à Disvale."
+  />
+
+  <meta name="theme-color" content="#111111" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --yellow: #ffc400;
+      --yellow-dark: #e8b000;
+      --black: #111111;
+      --black-2: #181818;
+      --black-3: #222222;
+      --gray-dark: #303030;
+      --gray: #6d6d6d;
+      --gray-light: #ececec;
+      --off-white: #f7f7f4;
+      --white: #ffffff;
+      --whatsapp: #25d366;
+
+      --radius: 24px;
+      --container: 1100px;
+
+      --shadow:
+        0 20px 50px rgba(0, 0, 0, 0.09),
+        0 6px 18px rgba(0, 0, 0, 0.05);
+
+      --shadow-dark:
+        0 25px 60px rgba(0, 0, 0, 0.24),
+        0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      color: var(--black);
+      background: var(--off-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    h1,
+    h2,
+    h3,
+    .display-font {
+      font-family: "Oswald", Impact, sans-serif;
+      text-transform: uppercase;
+      line-height: 1.02;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      color: #4a4a4a;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .container {
+      width: min(calc(100% - 36px), var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section-dark {
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 255, 255, 0.035),
+          transparent 22%
+        ),
+        repeating-linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.012) 0,
+          rgba(255, 255, 255, 0.012) 2px,
+          transparent 2px,
+          transparent 8px
+        ),
+        var(--black);
+    }
+
+    .section-dark p {
+      color: #c8c8c8;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 12px;
+      color: var(--black);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 30px;
+      height: 6px;
+      background: var(--yellow);
+      border-radius: 999px;
+    }
+
+    .section-dark .section-label {
+      color: var(--yellow);
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 16px;
+      font-size: clamp(2.1rem, 7vw, 3.75rem);
+    }
+
+    .section-intro {
+      max-width: 700px;
+      margin-bottom: 38px;
+      font-size: 1rem;
+    }
+
+    /* ==================================================
+       BOTÕES
+       ================================================== */
+
+    .btn {
+      min-height: 54px;
+      padding: 14px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 900;
+      line-height: 1.15;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-yellow {
+      color: var(--black);
+      background: var(--yellow);
+      border-color: var(--yellow);
+      box-shadow: 0 10px 25px rgba(255, 196, 0, 0.18);
+    }
+
+    .btn-yellow:hover {
+      background: #ffd12e;
+      border-color: #ffd12e;
+    }
+
+    .btn-dark {
+      color: var(--white);
+      background: var(--black);
+      border-color: var(--black);
+    }
+
+    .btn-dark:hover {
+      background: #292929;
+      border-color: #292929;
+    }
+
+    .btn-outline-light {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .btn-outline-light:hover {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .btn svg {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 auto;
+    }
+
+    /* ==================================================
+       HEADER
+       ================================================== */
+
+    .site-header {
+      position: fixed;
+      z-index: 1000;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(17, 17, 17, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      box-shadow:
+        0 16px 45px rgba(0, 0, 0, 0.25),
+        0 4px 12px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 118px;
+      max-height: 45px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .header-location {
+      display: none;
+    }
+
+    .header-btn {
+      min-height: 46px;
+      padding: 6px 12px 6px 10px;
+      gap: 7px;
+    }
+
+    .header-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .header-whatsapp-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    .header-whatsapp-label {
+      font-size: 0.55rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .header-whatsapp-number {
+      margin-top: 3px;
+      font-family: "Oswald", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* ==================================================
+       HERO
+       ================================================== */
+
+    .hero {
+      min-height: 100svh;
+      padding: 105px 0 46px;
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at 90% 45%,
+          rgba(255, 196, 0, 0.11),
+          transparent 35%
+        ),
+        linear-gradient(
+          105deg,
+          rgba(0, 0, 0, 0.98),
+          rgba(0, 0, 0, 0.89)
+        ),
+        repeating-linear-gradient(
+          135deg,
+          #181818 0px,
+          #181818 3px,
+          #151515 3px,
+          #151515 9px
+        );
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      right: -130px;
+      top: 95px;
+      width: 300px;
+      height: 560px;
+      transform: rotate(13deg);
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          var(--yellow) 0 28px,
+          var(--black) 28px 56px
+        );
+      opacity: 0.065;
+      border-radius: 60px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: grid;
+      gap: 36px;
+    }
+
+    .hero-copy {
+      width: 100%;
+      padding-inline: 2px;
+    }
+
+    .hero-eyebrow {
+      width: fit-content;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 999px;
+      font-size: 0.66rem;
+      font-weight: 900;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(255, 196, 0, 0.13);
+    }
+
+    .hero h1 {
+      max-width: 540px;
+      margin-bottom: 13px;
+      font-size: clamp(2.55rem, 11vw, 4rem);
+      line-height: 0.97;
+    }
+
+    .hero h1 span {
+      color: var(--yellow);
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-bottom: 16px;
+      color: #ededed;
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+
+    /* ==================================================
+       NOVA FOTO DA LOJA
+       SEM FUNDO BRANCO / SEM PADDING / SEM CORTE
+       Salve a nova imagem como:
+       foto-loja-mg-agro.png
+       ================================================== */
+
+    .hero-mobile-photo,
+    .hero-store-photo,
+    .location-photo {
+      width: 100%;
+      overflow: hidden;
+      background: transparent;
+      line-height: 0;
+    }
+
+    .hero-mobile-photo {
+      margin-bottom: 16px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.22),
+        0 4px 10px rgba(0, 0, 0, 0.14);
+    }
+
+    .hero-mobile-photo img,
+    .hero-store-photo img,
+    .location-photo img {
+      width: 100%;
+      height: auto;
+      max-width: none;
+      display: block;
+      margin: 0;
+      padding: 0;
+      object-fit: initial;
+      object-position: center;
+      vertical-align: top;
+    }
+
+    /* ==================================================
+       INFORMAÇÕES RÁPIDAS
+       ================================================== */
+
+    .hero-quick-info {
+      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .quick-card {
+      position: relative;
+      padding: 14px 15px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    .quick-card-title {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .quick-card-title svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 17px;
+    }
+
+    .quick-card p {
+      margin: 0;
+      color: var(--white);
+      font-size: 0.79rem;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .quick-location {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .quick-location-icon {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 37px;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 50%;
+    }
+
+    .quick-location-icon svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .location-main {
+      display: block;
+      color: var(--white);
+      font-size: 0.79rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .location-reference {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 3px 8px;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 999px;
+      font-size: 0.67rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .hero-actions {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+      min-height: 53px;
+    }
+
+    .hero-panel {
+      display: none;
+    }
+
+    /* ==================================================
+       DIVISOR
+       ================================================== */
+
+    .hazard-strip {
+      position: relative;
+      z-index: 5;
+      height: 42px;
+      margin-top: -1px;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .hazard-strip::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -34px;
+      width: 140%;
+      height: 68px;
+      transform: translateX(-50%);
+      background: var(--yellow);
+      border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    }
+
+    /* ==================================================
+       EQUIPAMENTOS
+       ================================================== */
+
+    .equipment-section {
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(0, 0, 0, 0.035),
+          transparent 26%
+        ),
+        linear-gradient(#fafafa, #f1f1ee);
+    }
+
+    .equipment-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .equipment-card {
+      min-height: 235px;
+      padding: 26px 21px 21px;
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid rgba(17, 17, 17, 0.1);
+      border-radius: var(--radius);
+      box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.07),
+        0 4px 12px rgba(0, 0, 0, 0.035);
+    }
+
+    .equipment-card::before {
+      content: "";
+      width: 48px;
+      height: 8px;
+      margin-bottom: 20px;
+      display: block;
+      background: var(--yellow);
+      border-radius: 999px;
+    }
+
+    .equipment-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+    }
+
+    .equipment-card p {
+      flex: 1;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .equipment-card .btn {
+      width: 100%;
+      min-height: 49px;
+      margin-top: auto;
+    }
+
+    /* ==================================================
+       CONSERTO E VENDAS
+       ================================================== */
+
+    .service-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .service-box {
+      position: relative;
+      min-height: 290px;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .service-box.repair {
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(255, 196, 0, 0.14),
+          transparent 30%
+        ),
+        linear-gradient(145deg, #252525, #111);
+    }
+
+    .service-box.sales {
+      color: var(--black);
+      background:
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(255, 255, 255, 0.45),
+          transparent 25%
+        ),
+        linear-gradient(145deg, #ffc400, #e7af00);
+    }
+
+    .service-number {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      color: var(--yellow);
+      font-family: "Oswald", sans-serif;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      opacity: 0.11;
+    }
+
+    .sales .service-number {
+      color: var(--black);
+    }
+
+    .service-box h3 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 12px;
+      font-size: 2.15rem;
+    }
+
+    .service-box p {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 23px;
+    }
+
+    .repair p {
+      color: #d2d2d2;
+    }
+
+    .sales p {
+      color: #2f2f2f;
+    }
+
+    .service-box .btn {
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+    }
+
+    /* ==================================================
+       BENEFÍCIOS
+       ================================================== */
+
+    .benefits-section {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.016) 0,
+          rgba(0, 0, 0, 0.016) 1px,
+          transparent 1px,
+          transparent 14px
+        ),
+        #f5f5f1;
+    }
+
+    .benefits-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .benefit {
+      position: relative;
+      padding: 21px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid rgba(17, 17, 17, 0.09);
+      border-radius: 24px;
+      box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.055),
+        0 4px 10px rgba(0, 0, 0, 0.025);
+    }
+
+    .benefit::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 28px;
+      width: 6px;
+      height: 44px;
+      background: var(--yellow);
+      border-radius: 0 999px 999px 0;
+    }
+
+    .benefit-icon {
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 50%;
+      font-size: 0.92rem;
+      font-weight: 900;
+    }
+
+    .benefit h3 {
+      margin-bottom: 6px;
+      font-size: 1.2rem;
+    }
+
+    .benefit p {
+      font-size: 0.87rem;
+    }
+
+    /* ==================================================
+       COMO FUNCIONA
+       ================================================== */
+
+    .steps {
+      display: grid;
+      gap: 15px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      min-height: 220px;
+      padding: 25px 21px;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(255, 196, 0, 0.08),
+          transparent 28%
+        ),
+        #1c1c1c;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 24px;
+      box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.2),
+        0 5px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      width: 60px;
+      height: 60px;
+      margin-bottom: 30px;
+      display: grid;
+      place-items: center;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 50%;
+      font-family: "Oswald", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .step::after {
+      content: "";
+      position: absolute;
+      top: 55px;
+      left: 94px;
+      width: calc(100% - 120px);
+      height: 3px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 196, 0, 0.65),
+          transparent
+        );
+      border-radius: 999px;
+    }
+
+    .step h3 {
+      margin-bottom: 9px;
+      color: var(--white);
+      font-size: 1.45rem;
+    }
+
+    .step p {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+    }
+
+    /* ==================================================
+       LOCALIZAÇÃO
+       ================================================== */
+
+    .location-section {
+      background: #ffffff;
+    }
+
+    .location-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .location-card {
+      padding: 25px 20px;
+      color: var(--white);
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(255, 196, 0, 0.09),
+          transparent 25%
+        ),
+        var(--black);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 28px;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .location-card .section-label {
+      color: var(--yellow);
+    }
+
+    .location-card h2 {
+      margin-bottom: 12px;
+      font-size: clamp(2.2rem, 8vw, 3.8rem);
+    }
+
+    .location-address {
+      margin-bottom: 16px;
+      color: #d0d0d0;
+      font-size: 0.98rem;
+    }
+
+    .location-address strong {
+      color: var(--white);
+    }
+
+    .location-highlight {
+      display: inline-flex;
+      margin-bottom: 19px;
+      padding: 9px 14px;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 999px;
+      font-family: "Oswald", sans-serif;
+      font-size: 0.94rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .location-photo {
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+
+    .location-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .hours-card {
+      padding: 25px 20px;
+      color: var(--black);
+      background: var(--yellow);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hours-card h3 {
+      margin-bottom: 18px;
+      font-size: 1.9rem;
+    }
+
+    .hours-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .hours-item {
+      padding: 13px 15px;
+      display: grid;
+      gap: 3px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 17px;
+    }
+
+    .hours-item span:first-child {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hours-item span:last-child {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* ==================================================
+       CTA FINAL
+       ================================================== */
+
+    .final-cta {
+      padding: 58px 0;
+      overflow: hidden;
+      background: var(--yellow);
+    }
+
+    .cta-inner {
+      max-width: 850px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 14px;
+      color: var(--black);
+      font-size: clamp(2.4rem, 9vw, 4.6rem);
+    }
+
+    .final-cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #2d2d2d;
+    }
+
+    .final-cta .btn {
+      width: 100%;
+      max-width: 420px;
+      min-height: 60px;
+    }
+
+    /* ==================================================
+       RODAPÉ
+       ================================================== */
+
+    .site-footer {
+      color: var(--white);
+      background: #0d0d0d;
+    }
+
+    .footer-main {
+      padding: 45px 0 34px;
+      display: grid;
+      gap: 30px;
+    }
+
+    .footer-logo img {
+      width: 220px;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      color: #bdbdbd;
+      font-size: 0.88rem;
+    }
+
+    .footer-block h3 {
+      margin-bottom: 11px;
+      color: var(--yellow);
+      font-size: 1.25rem;
+    }
+
+    .footer-block p,
+    .footer-block a {
+      display: block;
+      margin-bottom: 6px;
+      color: #cecece;
+      font-size: 0.88rem;
+    }
+
+    .footer-bottom {
+      padding: 18px 0;
+      text-align: center;
+      border-top: 1px solid #2c2c2c;
+      color: #888;
+      font-size: 0.76rem;
+    }
+
+    /* ==================================================
+       WHATSAPP FLUTUANTE
+       ================================================== */
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 1100;
+      right: 16px;
+      bottom: 16px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--whatsapp);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.25),
+        0 5px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .whatsapp-float-label {
+      display: none;
+    }
+
+    /* ==================================================
+       ANIMAÇÕES
+       ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay: 0.08s;
+    }
+
+    .delay-2 {
+      transition-delay: 0.16s;
+    }
+
+    .delay-3 {
+      transition-delay: 0.24s;
+    }
+
+    /* ==================================================
+       TABLET
+       ================================================== */
+
+    @media (min-width: 640px) {
+      .container {
+        width: min(calc(100% - 52px), var(--container));
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-quick-info {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions .btn {
+        width: auto;
+      }
+
+      .equipment-grid,
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-main {
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+    }
+
+    /* ==================================================
+       DESKTOP
+       ================================================== */
+
+    @media (min-width: 900px) {
+
+      html {
+        scroll-padding-top: 130px;
+      }
+
+      .section {
+        padding: 92px 0;
+      }
+
+      .site-header {
+        top: 14px;
+        left: 20px;
+        right: 20px;
+        border-radius: 999px;
+      }
+
+      .header-inner {
+        min-height: 80px;
+      }
+
+      .brand img {
+        width: 210px;
+        max-height: 62px;
+      }
+
+      .header-location {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 8px 13px;
+        color: #dedede;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .header-location svg {
+        width: 18px;
+        color: var(--yellow);
+      }
+
+      .header-whatsapp-label {
+        font-size: 0.72rem;
+      }
+
+      .header-whatsapp-number {
+        font-size: 0.98rem;
+      }
+
+      .hero {
+        min-height: 760px;
+        padding: 165px 0 90px;
+        align-items: center;
+      }
+
+      .hero-grid {
+        grid-template-columns:
+          minmax(0, 1.08fr)
+          minmax(350px, 0.72fr);
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(4.4rem, 6vw, 6.6rem);
+      }
+
+      .hero-description {
+        font-size: 1.08rem;
+      }
+
+      .hero-mobile-photo {
+        display: none;
+      }
+
+      .hero-quick-info {
+        max-width: 670px;
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .hero-panel {
+        display: block;
+        padding: 23px;
+        color: var(--black);
+        background:
+          radial-gradient(
+            circle at 90% 10%,
+            rgba(255, 255, 255, 0.32),
+            transparent 26%
+          ),
+          linear-gradient(
+            145deg,
+            #ffc400,
+            #e8af00
+          );
+        border-radius: 28px;
+        box-shadow:
+          0 30px 70px rgba(0, 0, 0, 0.28),
+          0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .hero-store-photo {
+        margin-bottom: 21px;
+        border-radius: 20px;
+      }
+
+      .hero-panel h2 {
+        margin-bottom: 10px;
+        color: var(--black);
+        font-size: 2.1rem;
+      }
+
+      .hero-panel p {
+        margin-bottom: 14px;
+        color: #282828;
+        font-weight: 600;
+      }
+
+      .hero-panel strong {
+        display: block;
+        color: var(--black);
+        font-family: "Oswald", sans-serif;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      .hero-panel-location {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 7px 13px;
+        color: var(--black);
+        background: rgba(255, 255, 255, 0.58);
+        border-radius: 999px;
+        font-size: 0.88rem;
+        font-weight: 800;
+      }
+
+      .hero-panel-address {
+        display: block;
+        margin-top: 9px;
+        color: var(--black);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .equipment-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .benefit {
+        grid-column: span 2;
+      }
+
+      .benefit:nth-child(4) {
+        grid-column: 2 / span 2;
+      }
+
+      .benefit:nth-child(5) {
+        grid-column: 4 / span 2;
+      }
+
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .location-grid {
+        grid-template-columns: 1.3fr 0.7fr;
+      }
+
+      .location-card,
+      .hours-card {
+        padding: 38px;
+      }
+
+      .whatsapp-float {
+        right: 25px;
+        bottom: 25px;
+        width: auto;
+        min-width: 66px;
+        height: 66px;
+        padding: 0 18px;
+        display: flex;
+        gap: 10px;
+        border-radius: 999px;
+      }
+
+      .whatsapp-float-label {
+        display: inline;
+        font-size: 0.79rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+    }
+
+    /* ==================================================
+       CELULARES PEQUENOS
+       ================================================== */
+
+    @media (max-width: 370px) {
+
+      .brand img {
+        width: 102px;
+      }
+
+      .header-btn {
+        padding-inline: 8px;
+      }
+
+      .header-whatsapp-label {
+        font-size: 0.5rem;
+      }
+
+      .header-whatsapp-number {
+        font-size: 0.72rem;
+      }
+
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero-description {
+        font-size: 0.88rem;
+      }
+
+      .quick-card p,
+      .location-main {
+        font-size: 0.74rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================
+       HEADER
+       ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a
+        href="#inicio"
+        class="brand"
+        aria-label="MG Agro Assistência Técnica"
+      >
+        <img
+          src="logo.png"
+          alt="MG Agro Assistência Técnica"
+          width="440"
+          height="120"
+        />
+      </a>
+
+      <div class="header-actions">
+
+        <a
+          class="header-location"
+          href="#onde-estamos"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="2.5"></circle>
+          </svg>
+
+          Aimorés - MG
+        </a>
+
+        <a
+          class="btn btn-yellow header-btn whatsapp-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12.004 2C6.485 2 2 6.478 2 12c0 1.762.46 3.416 1.263 4.855L2 22l5.278-1.233A9.933 9.933 0 0 0 12.004 22C17.523 22 22 17.522 22 12S17.523 2 12.004 2Zm0 18.182a8.128 8.128 0 0 1-4.14-1.13l-.297-.177-3.13.732.75-3.05-.194-.312A8.14 8.14 0 1 1 12.004 20.182Z"/>
+          </svg>
+
+          <span class="header-whatsapp-text">
+
+            <span class="header-whatsapp-label">
+              Chamar no WhatsApp
+            </span>
+
+            <span class="header-whatsapp-number">
+              (33) 9802-1238
+            </span>
+
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ==================================================
+         HERO
+         ================================================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+
+          <div class="hero-eyebrow">
+            Assistência técnica em Aimorés - MG
+          </div>
+
+          <h1>
+            Seu equipamento parado?
+            <span>A gente resolve.</span>
+          </h1>
+
+          <p class="hero-description">
+            Conserto e venda de roçadeiras, motosserras, geradores de energia,
+            motobombas, lavadoras e ferramentas elétricas.
+          </p>
+
+
+          <!--
+            NOVA FOTO DA LOJA.
+            Salve a imagem enviada como:
+            foto-loja-mg-agro.png
+          -->
+
+          <div class="hero-mobile-photo">
+
+            <img
+              src="foto-loja-mg-agro.png"
+              alt="Fachada da MG Agro Assistência Técnica em Aimorés"
+              loading="eager"
+            />
+
+          </div>
+
+
+          <div class="hero-quick-info">
+
+            <div class="quick-card">
+
+              <div class="quick-card-title">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="m14.7 6.3 3-3a2.1 2.1 0 0 1 3 3l-3 3"></path>
+                  <path d="M18 8 8.5 17.5a3.5 3.5 0 1 1-5-5L13 3"></path>
+                  <path d="m5.8 11.2 7 7"></path>
+                </svg>
+
+                O que consertamos
+
+              </div>
+
+              <p>
+                Roçadeiras • Motosserras • Geradores • Motobombas •
+                Lavadoras • Ferramentas elétricas
+              </p>
+
+            </div>
+
+
+            <div class="quick-card quick-location">
+
+              <div class="quick-location-icon">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <div class="quick-card-title">
+                  Onde estamos
+                </div>
+
+                <span class="location-main">
+                  R. Dr. Hugo Lopes Nali, 732A<br>
+                  Aimorés - MG
+                </span>
+
+                <span class="location-reference">
+                  Em frente à Disvale
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="btn btn-yellow whatsapp-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12.004 2C6.485 2 2 6.478 2 12c0 1.762.46 3.416 1.263 4.855L2 22l5.278-1.233A9.933 9.933 0 0 0 12.004 22C17.523 22 22 17.522 22 12S17.523 2 12.004 2Z"/>
+              </svg>
+
+              Pedir orçamento no WhatsApp
+
+            </a>
+
+
+            <a
+              class="btn btn-outline-light"
+              href="https://www.google.com/maps/search/?api=1&query=R.+Dr.+Hugo+Lopes+Nali,+732A,+Aimor%C3%A9s,+MG,+35200-000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+
+              Como chegar
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO DESKTOP -->
+
+        <aside
+          class="hero-panel reveal delay-2"
+          aria-label="Informações da MG Agro"
+        >
+
+          <div class="hero-store-photo">
+
+            <img
+              src="foto-loja-mg-agro.png"
+              alt="Fachada da MG Agro Assistência Técnica em Aimorés"
+            />
+
+          </div>
+
+          <h2>
+            Precisa consertar?
+          </h2>
+
+          <p>
+            Fale diretamente com a equipe ou traga seu equipamento até a loja.
+          </p>
+
+          <strong>
+            MG Agro
+          </strong>
+
+          <span class="hero-panel-location">
+            Em Aimorés, em frente à Disvale
+          </span>
+
+          <span class="hero-panel-address">
+            R. Dr. Hugo Lopes Nali, 732A - Aimorés, MG
+          </span>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <div
+      class="hazard-strip"
+      aria-hidden="true"
+    ></div>
+
+
+    <!-- ==================================================
+         EQUIPAMENTOS
+         ================================================== -->
+
+    <section
+      class="section equipment-section"
+      id="equipamentos"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            Assistência técnica
+          </span>
+
+          <h2 class="section-title">
+            Equipamentos que atendemos
+          </h2>
+
+          <p class="section-intro">
+            Seu equipamento apresentou problema? Traga até a MG Agro ou fale
+            conosco antes pelo WhatsApp.
+          </p>
+
+        </div>
+
+
+        <div class="equipment-grid">
+
+          <article class="equipment-card reveal">
+
+            <h3>Roçadeiras</h3>
+
+            <p>
+              Avaliação e manutenção de roçadeiras para quem precisa colocar o
+              equipamento novamente para trabalhar.
+            </p>
+
+            <a
+              class="btn btn-dark equipment-whatsapp"
+              href="#"
+              data-equipment="roçadeira"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pedir orçamento
+            </a>
+
+          </article>
+
+
+          <article class="equipment-card reveal delay-1">
+
+            <h3>Motosserras</h3>
+
+            <p>
+              Diagnóstico e manutenção para motosserras com falhas de
+              funcionamento, partida ou desempenho.
+            </p>
+
+            <a
+              class="btn btn-dark equipment-whatsapp"
+              href="#"
+              data-equipment="motosserra"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pedir orçamento
+            </a>
+
+          </article>
+
+
+          <article class="equipment-card reveal delay-2">
+
+            <h3>Geradores</h3>
+
+            <p>
+              Assistência em geradores de energia para identificação do
+              problema e orçamento do serviço.
+            </p>
+
+            <a
+              class="btn btn-dark equipment-whatsapp"
+              href="#"
+              data-equipment="gerador de energia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pedir orçamento
+            </a>
+
+          </article>
+
+
+          <article class="equipment-card reveal delay-3">
+
+            <h3>Motobombas</h3>
+
+            <p>
+              Avaliação de motobombas elétricas ou a combustão para encontrar
+              a causa da falha e definir o reparo.
+            </p>
+
+            <a
+              class="btn btn-dark equipment-whatsapp"
+              href="#"
+              data-equipment="motobomba"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pedir orçamento
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         CONSERTO E VENDAS
+         ================================================== -->
+
+    <section
+      class="section section-dark"
+      id="servicos"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            MG Agro
+          </span>
+
+          <h2 class="section-title">
+            Conserto e venda em um só lugar
+          </h2>
+
+          <p class="section-intro">
+            Aqui você pode trazer o equipamento que precisa de manutenção e
+            também consultar opções de equipamentos à venda.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+          <article class="service-box repair reveal">
+
+            <span class="service-number">
+              01
+            </span>
+
+            <h3>
+              Assistência técnica
+            </h3>
+
+            <p>
+              Trabalhamos com equipamentos elétricos e a combustão. Recebemos
+              seu equipamento para avaliação e informamos o serviço necessário.
+            </p>
+
+            <a
+              class="btn btn-yellow whatsapp-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar com a assistência
+            </a>
+
+          </article>
+
+
+          <article class="service-box sales reveal delay-1">
+
+            <span class="service-number">
+              02
+            </span>
+
+            <h3>
+              Venda de equipamentos
+            </h3>
+
+            <p>
+              Precisa substituir ou comprar um equipamento? Consulte a MG Agro
+              pelo WhatsApp ou visite nossa loja em Aimorés.
+            </p>
+
+            <a
+              class="btn btn-dark"
+              href="https://wa.me/553398021238?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20MG%20Agro%20e%20gostaria%20de%20consultar%20os%20equipamentos%20%C3%A0%20venda."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consultar equipamentos
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div
+      class="hazard-strip"
+      aria-hidden="true"
+    ></div>
+
+
+    <!-- ==================================================
+         BENEFÍCIOS
+         ================================================== -->
+
+    <section
+      class="section benefits-section"
+      id="diferenciais"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            Atendimento prático
+          </span>
+
+          <h2 class="section-title">
+            Por que procurar a MG Agro?
+          </h2>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+          <article class="benefit reveal">
+
+            <div class="benefit-icon">
+              01
+            </div>
+
+            <div>
+
+              <h3>
+                WhatsApp direto
+              </h3>
+
+              <p>
+                Fale diretamente com a loja para tirar dúvidas e solicitar seu orçamento.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="benefit reveal delay-1">
+
+            <div class="benefit-icon">
+              02
+            </div>
+
+            <div>
+
+              <h3>
+                Loja física
+              </h3>
+
+              <p>
+                Atendimento em Aimorés, em frente à Disvale, para você levar seu equipamento.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="benefit reveal delay-2">
+
+            <div class="benefit-icon">
+              03
+            </div>
+
+            <div>
+
+              <h3>
+                Diagnóstico
+              </h3>
+
+              <p>
+                O equipamento é avaliado para identificar o problema antes do serviço.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="benefit reveal delay-1">
+
+            <div class="benefit-icon">
+              04
+            </div>
+
+            <div>
+
+              <h3>
+                Elétricos e a combustão
+              </h3>
+
+              <p>
+                Atendimento para diferentes tipos de equipamentos usados no campo e no dia a dia.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="benefit reveal delay-2">
+
+            <div class="benefit-icon">
+              05
+            </div>
+
+            <div>
+
+              <h3>
+                Orçamento rápido
+              </h3>
+
+              <p>
+                Entre em contato pelo WhatsApp e agilize o primeiro atendimento da sua necessidade.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         COMO FUNCIONA
+         ================================================== -->
+
+    <section
+      class="section section-dark"
+      id="como-funciona"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            É simples
+          </span>
+
+          <h2 class="section-title">
+            Como funciona
+          </h2>
+
+          <p class="section-intro">
+            Você fala com a MG Agro, apresenta seu equipamento e recebe a orientação
+            para seguir com o atendimento.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <article class="step reveal">
+
+            <h3>
+              Chame ou venha à loja
+            </h3>
+
+            <p>
+              Fale pelo WhatsApp ou leve seu equipamento diretamente até a MG Agro em Aimorés.
+            </p>
+
+          </article>
+
+
+          <article class="step reveal delay-1">
+
+            <h3>
+              Avaliamos o equipamento
+            </h3>
+
+            <p>
+              O equipamento é analisado para identificar o problema e o serviço necessário.
+            </p>
+
+          </article>
+
+
+          <article class="step reveal delay-2">
+
+            <h3>
+              Orçamento e conserto
+            </h3>
+
+            <p>
+              Após a avaliação, você recebe o orçamento para decidir sobre o conserto.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         LOCALIZAÇÃO
+         ================================================== -->
+
+    <section
+      class="section location-section"
+      id="onde-estamos"
+    >
+
+      <div class="container">
+
+        <div class="reveal">
+
+          <span class="section-label">
+            Visite a loja
+          </span>
+
+          <h2 class="section-title">
+            Onde estamos
+          </h2>
+
+          <p class="section-intro">
+            Precisando trazer seu equipamento? Estamos na R. Dr. Hugo Lopes
+            Nali, 732A, em Aimorés, em frente à Disvale.
+          </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+          <article class="location-card reveal">
+
+            <span class="section-label">
+              MG Agro Assistência Técnica
+            </span>
+
+            <h2>
+              Em Aimorés
+            </h2>
+
+            <p class="location-address">
+              <strong>Endereço:</strong>
+              R. Dr. Hugo Lopes Nali, 732A - Aimorés, MG, 35200-000
+            </p>
+
+            <div class="location-highlight">
+              Em frente à Disvale
+            </div>
+
+
+            <div class="location-photo">
+
+              <img
+                src="foto-loja-mg-agro.png"
+                alt="Fachada da MG Agro Assistência Técnica em Aimorés"
+                loading="lazy"
+              />
+
+            </div>
+
+
+            <div class="location-actions">
+
+              <a
+                class="btn btn-yellow"
+                href="https://www.google.com/maps/search/?api=1&query=R.+Dr.+Hugo+Lopes+Nali,+732A,+Aimor%C3%A9s,+MG,+35200-000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="2.5"></circle>
+                </svg>
+
+                Abrir no Google Maps
+
+              </a>
+
+
+              <a
+                class="btn btn-outline-light whatsapp-link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chamar no WhatsApp
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <aside class="hours-card reveal delay-1">
+
+            <h3>
+              Horário de funcionamento
+            </h3>
+
+            <div class="hours-list">
+
+              <div class="hours-item">
+
+                <span>
+                  Segunda a quinta
+                </span>
+
+                <span>
+                  7:30 às 17:30
+                </span>
+
+              </div>
+
+
+              <div class="hours-item">
+
+                <span>
+                  Sexta-feira
+                </span>
+
+                <span>
+                  7:30 às 16:30
+                </span>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         CTA FINAL
+         ================================================== -->
+
+    <section class="final-cta">
+
+      <div class="container cta-inner reveal">
+
+        <h2>
+          Seu equipamento precisa de atenção?
+        </h2>
+
+        <p>
+          Envie uma mensagem para a MG Agro e fale diretamente pelo WhatsApp.
+        </p>
+
+        <a
+          class="btn btn-dark whatsapp-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12.004 2C6.485 2 2 6.478 2 12c0 1.762.46 3.416 1.263 4.855L2 22l5.278-1.233A9.933 9.933 0 0 0 12.004 22C17.523 22 22 17.522 22 12S17.523 2 12.004 2Z"/>
+          </svg>
+
+          Pedir orçamento agora
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================================================
+       RODAPÉ
+       ================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-main">
+
+      <div class="footer-logo">
+
+        <img
+          src="logo.png"
+          alt="MG Agro Assistência Técnica"
+          loading="lazy"
+        />
+
+        <p>
+          Conserto e venda de equipamentos elétricos e a combustão em Aimorés - MG.
+        </p>
+
+      </div>
+
+
+      <div class="footer-block">
+
+        <h3>
+          Atendimento
+        </h3>
+
+        <p>
+          Segunda a quinta: 7:30 às 17:30
+        </p>
+
+        <p>
+          Sexta: 7:30 às 16:30
+        </p>
+
+        <p>
+          R. Dr. Hugo Lopes Nali, 732A - Aimorés - MG
+        </p>
+
+        <p>
+          Em frente à Disvale
+        </p>
+
+      </div>
+
+
+      <div class="footer-block">
+
+        <h3>
+          Contato
+        </h3>
+
+        <a
+          href="https://wa.me/553398021238"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp: (33) 9802-1238
+        </a>
+
+        <a
+          href="https://www.instagram.com/mgagroassistencia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @mgagroassistencia
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        ©
+        <span id="current-year"></span>
+        MG Agro – todos os direitos reservados
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ==================================================
+       WHATSAPP FLUTUANTE
+       ================================================== -->
+
+  <a
+    class="whatsapp-float whatsapp-link"
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chamar a MG Agro pelo WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.875 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12.004 2C6.485 2 2 6.478 2 12c0 1.762.46 3.416 1.263 4.855L2 22l5.278-1.233A9.933 9.933 0 0 0 12.004 22C17.523 22 22 17.522 22 12S17.523 2 12.004 2Z"/>
+    </svg>
+
+    <span class="whatsapp-float-label">
+      Fale conosco
+    </span>
+
+  </a>
+
+
+  <script>
+    /* ==================================================
+       WHATSAPP
+       ================================================== */
+
+    const whatsappNumber = "553398021238";
+
+    const defaultWhatsappMessage =
+      "Olá! Vim pelo site da MG Agro e gostaria de um orçamento.";
+
+    const defaultWhatsappUrl =
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        defaultWhatsappMessage
+      )}`;
+
+    document
+      .querySelectorAll(".whatsapp-link")
+      .forEach((link) => {
+        link.href = defaultWhatsappUrl;
+      });
+
+
+    /* ==================================================
+       WHATSAPP POR EQUIPAMENTO
+       ================================================== */
+
+    document
+      .querySelectorAll(".equipment-whatsapp")
+      .forEach((link) => {
+
+        const equipment =
+          link.dataset.equipment;
+
+        const message =
+          `Olá! Vim pelo site da MG Agro e gostaria de um orçamento para minha ${equipment}.`;
+
+        link.href =
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+            message
+          )}`;
+
+      });
+
+
+    /* ==================================================
+       ANIMAÇÕES
+       ================================================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+      const observer =
+        new IntersectionObserver(
+
+          (entries, observerInstance) => {
+
+            entries.forEach((entry) => {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add(
+                  "is-visible"
+                );
+
+                observerInstance.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -30px 0px",
+          }
+
+        );
+
+      revealElements.forEach(
+        (element) =>
+          observer.observe(element)
+      );
+
+    } else {
+
+      revealElements.forEach(
+        (element) =>
+          element.classList.add(
+            "is-visible"
+          )
+      );
+
+    }
+
+
+    /* ==================================================
+       ANO AUTOMÁTICO
+       ================================================== */
+
+    document
+      .getElementById("current-year")
+      .textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
